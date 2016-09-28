@@ -181,5 +181,9 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
-.vs
+
+# Visual Studio directory
+.vs/
+
+# DotNet Core generated file
 project.lock.json

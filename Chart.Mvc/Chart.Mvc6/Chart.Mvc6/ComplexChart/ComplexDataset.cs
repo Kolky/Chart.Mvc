@@ -5,14 +5,15 @@ namespace Chart.Mvc.Charts
     /// <summary>
     /// The complex dataset.
     /// </summary>
-    public class ComplexDataset
+    public class ComplexDataset<TData>
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ComplexDataset"/> class.
-        /// </summary>
         public ComplexDataset()
         {
-            this.Data = new List<double>();
+        }
+
+        public ComplexDataset(IEnumerable<TData> data)
+        {
+            this.Data = new List<TData>(data);
         }
 
         /// <summary>
@@ -72,10 +73,6 @@ namespace Chart.Mvc.Charts
         /// <summary>
         /// Gets or sets the data.
         /// </summary>
-        public List<double> Data
-        {
-            get; 
-            set;
-        }
+        public IList<TData> Data { get; } = new List<TData>();
     }
 }

@@ -5,9 +5,8 @@ namespace Chart.Mvc.Charts
     /// <summary>
     /// The polar area chart.
     /// </summary>
-    public class PolarAreaChart : ChartBase<PolarAreaOptions>
+    public class PolarAreaChart : ChartBase<PolarAreaOptions, double>
     {
-
         private readonly PolarAreaOptions chartOptions = new PolarAreaOptions();
 
         /// <summary>

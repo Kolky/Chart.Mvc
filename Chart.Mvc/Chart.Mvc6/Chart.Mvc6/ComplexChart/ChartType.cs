@@ -32,6 +32,11 @@
         /// <summary>
         /// The doughnut.
         /// </summary>
-        Doughnut
+        Doughnut,
+
+        /// <summary>
+        /// The bubble.
+        /// </summary>
+        Bubble
     }
 }

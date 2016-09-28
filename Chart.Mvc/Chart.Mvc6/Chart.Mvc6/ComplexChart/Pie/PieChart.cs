@@ -3,9 +3,8 @@ namespace Chart.Mvc.Charts
     /// <summary>
     /// The pie chart.
     /// </summary>
-    public class PieChart : ChartBase<PieChartOptions>
+    public class PieChart : ChartBase<PieChartOptions, double>
     {
-
         private readonly PieChartOptions chartOptions = new PieChartOptions();
         
         /// <summary>

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace Chart.Mvc.Extensions
@@ -38,6 +39,14 @@ namespace Chart.Mvc.Extensions
             }
 
             return s;
+        }
+
+        public static void AddRange<T>(this IList<T> list, IEnumerable<T> data)
+        {
+            foreach (var item in data)
+            {
+                list.Add(item);
+            }
         }
     }
 }

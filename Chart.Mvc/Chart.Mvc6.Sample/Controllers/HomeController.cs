@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Chart.Mvc.Charts;
 using Chart.Mvc6.Sample.ViewModels;
 using Chart.Mvc.Sample.Models;
+using Chart.Mvc.Extensions;
 
 namespace Chart.Mvc6.Sample.Controllers
 {
@@ -74,6 +71,14 @@ namespace Chart.Mvc6.Sample.Controllers
             var chart = new DoughnutChart();
             chart.ComplexData.Labels.AddRange(FakeComplexChartData.Labels);
             chart.ComplexData.Datasets.AddRange(FakeComplexChartData.Datasets);
+
+            return chart;
+        }
+
+        private BubbleChart GetBubbleChart()
+        {
+            var chart = new BubbleChart();
+            chart.ComplexData.Datasets.AddRange(FakeComplexChartData.BubbleDatasets);
 
             return chart;
         }

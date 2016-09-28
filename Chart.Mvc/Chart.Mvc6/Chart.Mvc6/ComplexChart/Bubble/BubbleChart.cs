@@ -1,11 +1,8 @@
-namespace Chart.Mvc.Charts
+﻿namespace Chart.Mvc.Charts
 {
-    /// <summary>
-    /// The radar chart.
-    /// </summary>
-    public class RadarChart : ChartBase<RadarChartOptions, double>
+    public class BubbleChart : ChartBase<BubbleChartOptions, BubbleChartData>
     {
-        private readonly RadarChartOptions chartOptions = new RadarChartOptions();
+        private readonly BubbleChartOptions chartOptions = new BubbleChartOptions();
 
         /// <summary>
         /// Gets the chart type.
@@ -14,14 +11,14 @@ namespace Chart.Mvc.Charts
         {
             get
             {
-                return ComplexChartType.Radar;
+                return ComplexChartType.Bubble;
             }
         }
 
         /// <summary>
         /// Gets the chart configuration.
         /// </summary>
-        public override RadarChartOptions ChartConfiguration
+        public override BubbleChartOptions ChartConfiguration
         {
             get
             {

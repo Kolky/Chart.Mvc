@@ -16,38 +16,39 @@
 <div class="row">
     <div class="col-md-6">
         <h3>Line Chart</h3>
-        <canvas id="LineChart" width="400" height="400"></canvas>
-        <line-chart Chart="@Model.LineChart" Width="400" Height="400" Canvas="LineChart"></line-chart>
+        <line-chart chart="@Model.LineChart" width="400" height="400" id="LineChart" />
     </div>
     <div class="col-md-6">
         <h3>Bar Chart</h3>
-        <canvas id="BarChart" width="400" height="400"></canvas>
-        <bar-chart Chart="@Model.BarChart" Width="400" Height="400" Canvas="BarChart"></bar-chart>
+        <bar-chart Chart="@Model.BarChart" Width="400" Height="400" id="BarChart" />
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-6">
         <h3>Radar Chart</h3>
-        <canvas id="RadarChart" width="400" height="400"></canvas>
-        <radar-chart Chart="@Model.RadarChart" Width="400" Height="400" Canvas="RadarChart"></radar-chart>
+        <radar-chart Chart="@Model.RadarChart" Width="400" Height="400" id="RadarChart" />
     </div>
     <div class="col-md-6">
         <h3>Polar Area Chart</h3>
-        <canvas id="PolarAreaChart" width="400" height="400"></canvas>
-        <polar-chart Chart="@Model.PolarAreaChart" Width="400" Height="400" Canvas="PolarAreaChart"></polar-chart>
+        <polar-chart Chart="@Model.PolarAreaChart" Width="400" Height="400" id="PolarAreaChart" />
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-6">
         <h3>Pie Chart</h3>
-        <canvas id="PieChart" width="400" height="400"></canvas>
-        <pie-chart Chart="@Model.PieChart" Width="400" Height="400" Canvas="PieChart"></pie-chart>
+        <pie-chart Chart="@Model.PieChart" Width="400" Height="400" id="PieChart" />
     </div>
     <div class="col-md-6">
         <h3>Doughnut Chart</h3>
-        <canvas id="DoughnutChart" width="400" height="400"></canvas>
-        <doughnut-chart Chart="@Model.DoughnutChart" Width="400" Height="400" Canvas="DoughnutChart"></doughnut-chart>
+        <doughnut-chart Chart="@Model.DoughnutChart" Width="400" Height="400" id="DoughnutChart" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Bubble Chart</h3>
+        <bubble-chart chart="@Model.BubbleChart" width="400" height="400" id="BubbleChart" />
     </div>
 </div>

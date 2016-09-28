@@ -3,25 +3,13 @@
     /// <summary>
     /// The chart base.
     /// </summary>
-    public abstract class ChartBase<TChartOptions> 
+    public abstract class ChartBase<TChartOptions, TChartData>
         where TChartOptions : ChartOptions
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ComplexChartBase"/> class.
-        /// </summary>
-        protected ChartBase()
-        {
-            this.ComplexData = new ComplexData();
-        }
-
-        /// <summary>
         /// Gets or sets the data.
         /// </summary>
-        public ComplexData ComplexData
-        {
-            get;
-            set;
-        }
+        public ComplexData<TChartData> ComplexData { get; } = new ComplexData<TChartData>();
 
         /// <summary>
         /// Gets the chart type.

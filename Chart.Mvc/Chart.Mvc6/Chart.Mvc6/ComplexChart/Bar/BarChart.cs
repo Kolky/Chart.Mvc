@@ -3,7 +3,7 @@ namespace Chart.Mvc.Charts
     /// <summary>
     /// The bar chart.
     /// </summary>
-    public class BarChart : ChartBase<BarChartOptions>
+    public class BarChart : ChartBase<BarChartOptions, double>
     {
         private readonly BarChartOptions chartOptions = new BarChartOptions();
 

@@ -3,9 +3,10 @@ namespace Chart.Mvc.Charts
     /// <summary>
     /// The doughnut chart.
     /// </summary>
-    public class DoughnutChart : ChartBase<DoughnutChartOptions>
+    public class DoughnutChart : ChartBase<DoughnutChartOptions, double>
     {
         private readonly DoughnutChartOptions chartOptions = new DoughnutChartOptions();
+
         /// <summary>
         /// Gets the chart type.
         /// </summary>

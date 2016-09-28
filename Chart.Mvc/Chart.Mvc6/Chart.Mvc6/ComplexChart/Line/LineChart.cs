@@ -3,7 +3,7 @@ namespace Chart.Mvc.Charts
     /// <summary>
     /// The line chart.
     /// </summary>
-    public class LineChart : ChartBase<LineChartOptions>
+    public class LineChart : ChartBase<LineChartOptions, double>
     {
         private readonly LineChartOptions chartOptions = new LineChartOptions();
 

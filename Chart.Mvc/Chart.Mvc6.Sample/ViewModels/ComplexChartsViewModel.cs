@@ -14,5 +14,6 @@ namespace Chart.Mvc6.Sample.ViewModels
         public PolarAreaChart PolarAreaChart { get; set; }
         public PieChart PieChart { get; set; }
         public DoughnutChart DoughnutChart { get; set; }
+        public BubbleChart BubbleChart { get; set; }
     }
 }

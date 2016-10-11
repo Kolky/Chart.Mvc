@@ -1,5 +1,7 @@
 ﻿namespace Chart.Mvc.Charts
 {
+    using Chart.Mvc.Charts.Scales;
+
     /// <summary>
     /// The complex chart options.
     /// </summary>
@@ -13,5 +15,7 @@
             get;
             set;
         }
+
+        public ScalesType Scales { get; } = new ScalesType();
     }
 }

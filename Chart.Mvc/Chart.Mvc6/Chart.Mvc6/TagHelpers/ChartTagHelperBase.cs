@@ -37,6 +37,8 @@ namespace Chart.Mvc6.TagHelpers
             output.Attributes.Add("height", this.Height);
 
             output.PostElement.AppendHtml(stringBuilder.ToString());
+
+            await Task.CompletedTask;
         }
 
         private Tuple<string, string, string> GetChartData()

@@ -6,7 +6,6 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyName>Chart.Mvc6</AssemblyName>
     <PackageId>Chart.Mvc6</PackageId>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>

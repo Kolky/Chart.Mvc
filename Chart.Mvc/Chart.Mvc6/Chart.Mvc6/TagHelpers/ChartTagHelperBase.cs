@@ -17,17 +17,20 @@ namespace Chart.Mvc6.TagHelpers
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
-            var chartData = this.GetChartData();
+            string chartType = this.Chart.ChartType.ToString();
+            string jsonData = this.Chart.ComplexData.ToJson();
+            string jsonOptions = this.Chart.ChartConfiguration.ToJson();
+
             var stringBuilder = new StringBuilder();
             stringBuilder.Append("<script type='text/javascript'>");
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.AppendFormat("var ctx = document.getElementById(\"{0}\").getContext(\"2d\");", this.Id);
             stringBuilder.Append(Environment.NewLine);
-            stringBuilder.AppendFormat("var data = JSON.parse('{0}');", chartData.Item1);
+            stringBuilder.AppendFormat("var data = JSON.parse('{0}');", jsonData);
             stringBuilder.Append(Environment.NewLine);
-            stringBuilder.AppendFormat("var options = JSON.parse('{0}');", chartData.Item2);
+            stringBuilder.AppendFormat("var options = JSON.parse('{0}');", jsonOptions);
             stringBuilder.Append(Environment.NewLine);
-            stringBuilder.Append("var " + this.Id.Replace('-', '_') + "_chart = new Chart(ctx, { type: '" + chartData.Item3.ToCamelCase() + "', data: data, options: options });");
+            stringBuilder.Append("var " + this.Id.Replace('-', '_') + "_chart = new Chart(ctx, { type: '" + chartType.ToCamelCase() + "', data: data, options: options });");
             stringBuilder.Append(Environment.NewLine);
             stringBuilder.Append("</script>");
 
@@ -39,15 +42,6 @@ namespace Chart.Mvc6.TagHelpers
             output.PostElement.AppendHtml(stringBuilder.ToString());
 
             await Task.CompletedTask;
-        }
-
-        private Tuple<string, string, string> GetChartData()
-        {
-            string chartType = this.Chart.ChartType.ToString();
-            string jsonData = this.Chart.ComplexData.ToJson();
-            string jsonOptions = this.Chart.ChartConfiguration.ToJson();
-
-            return new Tuple<string, string, string>(jsonData, jsonOptions, chartType);
         }
     }
 }

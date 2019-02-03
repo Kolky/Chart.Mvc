@@ -1,6 +1,6 @@
 ﻿namespace Chart.Mvc.Charts
 {
-    public class BubbleChart : ChartBase<BubbleChartOptions, BubbleChartData>
+    public class BubbleChart<T> : ChartBase<BubbleChartOptions, T>
     {
         private readonly BubbleChartOptions chartOptions = new BubbleChartOptions();
 

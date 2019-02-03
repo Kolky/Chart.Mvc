@@ -9,4 +9,5 @@ namespace Chart.Mvc6.TagHelpers
     public class PieChartTagHelper : ChartTagHelperBase<PieChartOptions, double> { }
     public class DoughnutChartTagHelper : ChartTagHelperBase<DoughnutChartOptions, double> { }
     public class BubbleChartTagHelper : ChartTagHelperBase<BubbleChartOptions, BubbleChartData> { }
+    public class BubbleChartTimeTagHelper : ChartTagHelperBase<BubbleChartOptions, BubbleChartTimeData> { }
 }

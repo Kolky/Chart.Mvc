@@ -12,7 +12,7 @@ namespace Chart.Mvc.Charts.Scales
         public TimeUnit? Round { get; set; }
         public string TooltipFormat { get; set; }
         public TimeUnit? Unit { get; set; }
-        public int? StepSize { get; set; }
+        public int? UnitStepSize { get; set; }
         public string MinUnit { get; set; }
     }
 }

@@ -70,6 +70,12 @@ namespace Chart.Mvc.Charts
             set;
         }
 
+        public string YAxisID
+        {
+            get;
+            set;
+        }
+
         /// <summary>
         /// Gets or sets the data.
         /// </summary>

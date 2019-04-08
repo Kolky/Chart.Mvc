@@ -1,8 +1,5 @@
 namespace Chart.Mvc.Charts.Scales
 {
-    using System;
-    using System.Collections.Generic;
-
     public class TimeScaleOptions : ScaleOptions
     {
         public override string Type
@@ -10,6 +7,11 @@ namespace Chart.Mvc.Charts.Scales
             get { return "time"; }
         }
 
+        public string Distribution { get; set; }
+        public string Bounds { get; set; }
+
         public TimeScaleParameters Time { get; } = new TimeScaleParameters();
+
+        public override TickOptions Ticks => new TimeTickOptions();
     }
 }

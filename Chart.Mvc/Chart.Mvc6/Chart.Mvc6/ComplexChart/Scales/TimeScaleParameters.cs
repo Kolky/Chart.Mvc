@@ -8,12 +8,11 @@ namespace Chart.Mvc.Charts.Scales
         public bool? IsoWeekDay { get; set; }
         public DateTime? Max { get; set; }
         public DateTime? Min { get; set; }
-
+        public string Parser { get; set; }
         public TimeUnit? Round { get; set; }
         public string TooltipFormat { get; set; }
-
         public TimeUnit? Unit { get; set; }
-        public int? UnitStepSize { get; set; }
+        public int? StepSize { get; set; }
         public string MinUnit { get; set; }
     }
 }

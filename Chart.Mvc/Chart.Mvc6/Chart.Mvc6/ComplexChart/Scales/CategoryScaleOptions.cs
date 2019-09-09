@@ -4,6 +4,6 @@
     {
         public override string Type => "category";
 
-        public override TickOptions Ticks => new CategoryTickOptions();
+        public override TickOptions Ticks { get; } = new CategoryTickOptions();
     }
 }

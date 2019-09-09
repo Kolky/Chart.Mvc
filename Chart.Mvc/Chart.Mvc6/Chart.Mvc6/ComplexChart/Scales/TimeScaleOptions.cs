@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace Chart.Mvc.Charts.Scales
 {
     public class TimeScaleOptions : ScaleOptions
@@ -12,6 +14,9 @@ namespace Chart.Mvc.Charts.Scales
 
         public TimeScaleParameters Time { get; } = new TimeScaleParameters();
 
-        public override TickOptions Ticks => new TimeTickOptions();
+        public override TickOptions Ticks { get; } = new TimeTickOptions();
+
+        [JsonIgnore]
+        public TimeTickOptions TimeTicks => this.Ticks as TimeTickOptions;
     }
 }
